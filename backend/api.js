@@ -16,7 +16,7 @@ mongoose.connect(query)
     });
 
 // Adding details via VS Code
-router.post('/save', async (req, res) => {
+router.post('/save1', async (req, res) => {
     try {
         const newEmployee = new EmployeeModel({
             EMPLOYEE_ID: 500,
@@ -39,7 +39,7 @@ router.post('/save', async (req, res) => {
     }
 });
 // Adding details via POSTMAN "POST" method
-router.post('/update', async (req, res) => {
+router.post('/save', async (req, res) => {
     try {
         const newEmployee = new EmployeeModel();
         newEmployee.EMPLOYEE_ID = req.body.EMPLOYEE_ID;
