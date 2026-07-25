@@ -2,6 +2,8 @@
 const express = require('express');
 //importing cors
 const cors = require('cors');
+const api = require("./api");
+
 
 //creating app
 const app = express();
@@ -14,9 +16,7 @@ app.use(express.json());
 
 
 //Test endpoint
-app.get('/employee-api', (req,res) => {
-    res.json({message:'Backend for employee-app working!'})
-});
+app.use('/employee-api', api);
 
 
 //code for listening

@@ -2,7 +2,7 @@ import React from "react";
 
 
 //creating a searchbar
-export default function SearchBar({ seachTxt, setSearchTxt }) {
+export default function SearchBar({ searchTxt, setSearchTxt }) {
     return (
         <div className="card mt-4">
             <div className="card-body">
@@ -12,7 +12,7 @@ export default function SearchBar({ seachTxt, setSearchTxt }) {
                             type="text"
                             className="form-control"
                             placeholder="Search by Employee ID, First Name or Last Name..."
-                            value={seachTxt}
+                            value={searchTxt}
                             onChange={(event) => setSearchTxt(event.target.value)}
                         />
                     </div>

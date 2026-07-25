@@ -1,16 +1,17 @@
 import axios from 'axios';
 
 //Base URL of your Node.js backend
-const BASE_URL = "htttp://localhost:5000/employee-api";
+const BASE_URL = "http://10.20.9.166:5000/employee-api";
 
 //Get all employees
 export const getAllEmployees = async () => {
+    console.log('step 3')
     return await axios.get(`${BASE_URL}/findall`);
 };
 
 //Add a new employee
 export const addEmployee = async (employee) => {
-    return await axios.post(`${BASE_URL}/save1`,employee);
+    return await axios.post(`${BASE_URL}/save`,employee);
 };
 
 
